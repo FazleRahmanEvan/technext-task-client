@@ -39,14 +39,14 @@ export default function Register() {
 
   // Redirect if already authenticated
   if (isAuthenticated) {
-    navigate("/dashboard");
+    navigate("/");
     return null;
   }
 
   const onSubmit = async (data: RegisterFormData) => {
     try {
       await registerUser(data.name, data.email, data.password);
-      navigate("/dashboard");
+      navigate("/");
     } catch (error) {
       console.error("Registration failed:", error);
     }

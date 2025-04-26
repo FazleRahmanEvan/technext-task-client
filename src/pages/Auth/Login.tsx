@@ -25,14 +25,14 @@ export default function Login() {
   });
 
   if (isAuthenticated) {
-    navigate("/dashboard");
+    navigate("/");
     return null;
   }
 
   const onSubmit = async (data: LoginFormData) => {
     try {
       await login(data.email, data.password);
-      navigate("/dashboard");
+      navigate("/");
     } catch (error) {
       console.error("Login failed:", error);
     }
