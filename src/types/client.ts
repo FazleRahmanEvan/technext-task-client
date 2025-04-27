@@ -8,3 +8,11 @@ export interface Client {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface ClientFormData {
+  name: string;
+  email?: string;
+  phone: string;
+  company?: string;
+  notes?: string;
+}
